@@ -21,3 +21,11 @@ variable "ssh_key_name" {
 variable "user_data" {
   default = "../web/user_data.sh"
 }
+
+variable "tags" {
+  type = map(string)
+  default = {
+    Name = "Edgar"
+  }
+}
+
