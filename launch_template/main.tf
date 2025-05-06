@@ -6,6 +6,6 @@ resource "aws_launch_template" "web_lt" {
   vpc_security_group_ids = var.vpc_security_group_ids
   user_data              = filebase64(var.user_data)
 
-  tags = var.tags
+  tags = var.my_tags
 }
 

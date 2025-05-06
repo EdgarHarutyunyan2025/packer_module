@@ -22,7 +22,7 @@ variable "user_data" {
   default = "../web/user_data.sh"
 }
 
-variable "tags" {
+variable "my_tags" {
   type = map(string)
   default = {
     Name = "Edgar"
