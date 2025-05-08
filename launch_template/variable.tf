@@ -18,10 +18,6 @@ variable "ssh_key_name" {
   default = ""
 }
 
-variable "user_data" {
-  default = "../web/user_data.sh"
-}
-
 variable "my_tags" {
   type = map(string)
   default = {
