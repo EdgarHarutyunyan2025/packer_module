@@ -11,6 +11,16 @@ resource "aws_lb_target_group" "web_tg" {
   port                 = var.tg_port
   protocol             = var.tg_protocol
   deregistration_delay = var.tg_deregistration_delay
+
+  health_check {
+    path                = var.health_check_path
+    protocol            = var.health_check_protocol
+    matcher             = var.health_check_matcher
+    interval            = var.health_check_interval
+    timeout             = var.health_check_timeout
+    healthy_threshold   = var.healthy_threshold
+    unhealthy_threshold = var.unhealthy_threshold
+  }
 }
 
 resource "aws_lb_listener" "http" {
