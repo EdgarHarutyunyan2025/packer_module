@@ -9,8 +9,7 @@ resource "aws_key_pair" "terraform_ssh_key" {
 }
 
 resource "local_file" "private_key" {
-  content = tls_private_key.ec2_key.private_key_pem
-  #filename = "${var.region}-ssh-key.pem"
+  content  = tls_private_key.ec2_key.private_key_pem
   filename = "${var.key_file_path}/${var.ssh_key_name}-ssh-key.pem"
 }
 

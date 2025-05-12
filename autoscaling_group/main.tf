@@ -30,24 +30,3 @@ resource "aws_autoscaling_group" "web" {
     create_before_destroy = true
   }
 }
-
-#resource "aws_autoscaling_policy" "scale_up" {
-#  name                   = var.autoscaling_policy_name
-#  scaling_adjustment     = var.scaling_adjustment
-#  adjustment_type        = var.adjustment_type
-#  cooldown               = var.cooldown
-#  autoscaling_group_name = var.policy_autoscaling_group_name
-#}
-#
-#resource "aws_autoscaling_policy" "scale_down" {
-#  name                   = var.autoscaling_policy_name
-#  scaling_adjustment     = var.scaling_adjustment
-#  adjustment_type        = var.adjustment_type
-#  cooldown               = var.cooldown
-#  autoscaling_group_name = var.policy_autoscaling_group_name
-#}
-#
-#output "web_loadbalancer_url" {
-#  value = aws_lb.web_lb.dns_name
-#}
-#
